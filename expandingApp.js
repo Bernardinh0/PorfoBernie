@@ -113,7 +113,7 @@ function changeImg() {
 
 
 
-   swipe = 'translateX(' + IntrestsCount * -700 + 'px)'
+   swipe = 'translateX(' + IntrestsCount * -900 + 'px)' /*-700 width du cadre*/
 
    myIntrests.style.transform = swipe
 

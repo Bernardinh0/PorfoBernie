@@ -162,11 +162,11 @@ width: 100%;
 .one .title-content{
   position: fixed;
 }
-.myIntrestsPhotos{display: flex;}
-.photo{width: 700px;
-height: 400px;}
 
-.myIntrestsPhotos {
+.photo{width: 900px; /*Taille de l'image*/
+height: 514px;}
+
+.myIntrestsPhotos { 
   display: flex;
 
   width: 700px;
@@ -186,15 +186,15 @@ height: 400px;}
 
 }
 .intrestsBtns > .buttonLeft{padding-right: 30px;}
-.myIntrestsContainer {
+.myIntrestsContainer { /*Taille du Container cadre*/
 
   display: flex;
   overflow: hidden;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 
   border-radius: 35px;
-  width: 700px;
-  height: 400px;
+  width: 900px;
+  height: 514px;
 
 }
 .sectionContent{display: flex;
