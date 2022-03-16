@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ body{
+   overflow: hidden;
+ }
+
+/* Setting container to flex and width to 80% of view port */
+.container {
+  color:  #eeece6    ;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+/*Adding background image to each section*/
+.one{
+	background: #004146;
+}
+.two{
+	background: #018076;
+}
+.three{
+	background: #03BFB5;
+  display: flex;
+}
+.four{
+	background: #949398;
+}
+/* Background properties and transition effect to section */
+.section{
+  text-align: start;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 100%;
+	flex: 0.15;
+  /*margin:8px;*/
+	position: relative;
+	transition: all 0.7s ease-out;
+}
+.section:not(.active) {
+  cursor: pointer;
+}
+
+/* section with active class will grow flex to 3 times */
+.section.active{
+	flex: 3;
+  overflow:auto; /*rajout 20.02.22*/
+  scrollbar-width: none; /*rajout 20.02.22*/
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+/*::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}*/
+.section.active .title-content{
+  /*position: fixed;*/
+  /*bottom: 0;
+  left: 0;
+  /*width: 100%;*/
+  height: 100px;
+}
+.section .title-content { 
+  /*bottom: 40px;
+  left: 0;*/
+  transform: rotate(-90deg);
+  transition: 1s;
+  color: aliceblue;
+  font-family: 'Playfair Display';
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  /*padding-bottom: 25px;*/
+  width: 100px;
+  height: 105px;
+  padding-right: 145px
+}
+
+
+.section.active >.title-content{
+  transition:1s;
+  transform: rotate(-90deg);
+  /*left: 10px;
+  padding-top: 15px;*/
+
+}
+
+.section.three >.title-content {
+  white-space: nowrap;
+    
+}
+.three .sectionContent{
+  display: flex;
+justify-content: center;
+align-content: center;
+width: 100%;
+}
+
+/* .section:nth-of-type(2) .title-content h3{
+  padding-bottom:50px;
+}
+.section:nth-of-type(3) .title-content h3{
+  padding-bottom:30px; 
+}
+.section:nth-of-type(4) .title-content h3{
+  padding-bottom:30px; 
+}  */
+
+
+/*20.02.22: Affichage en colonne des images et contenu intercalaires*/
+.one{
+  display: grid;
+  grid-template-columns: 100px 1fr;
+}
+
+
+.thirdSec img{
+  width: 200px;
+  height: 200px;
+}
+
+.sectionContent{
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding:1rem 2.5rem;
+}
+
+.thirdSec{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.title{
+  text-align: center;
+}
+
+.title-content{ 
+  position: fixed;
+}
+
+.sectionConetntJs{
+  display: none;
+}
+
+.one .title-content{
+  position: fixed;
+}
+.myIntrestsPhotos{display: flex;}
+.photo{width: 700px;
+height: 400px;}
+
+.myIntrestsPhotos {
+  display: flex;
+
+  width: 700px;
+
+  transform: translateX(0px);
+
+  transition: 0.6s ease-in-out;
+
+  ;
+}
+
+.intrestsBtns {
+  display: flex;
+
+
+  padding-top: 20px;
+
+}
+.intrestsBtns > .buttonLeft{padding-right: 30px;}
+.myIntrestsContainer {
+
+  display: flex;
+  overflow: hidden;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+  border-radius: 35px;
+  width: 700px;
+  height: 400px;
+
+}
+.sectionContent{display: flex;
+align-items: center;
+height: 100%;}
+
+
+/*CARROUSSEL
+CARROUSSEL
+CARROUSSEL
+CARROUSSEL*/
+
+
+
+/*Accordion*/
+/*Accordion*/
+/*Accordion*/
+/*Accordion*/
+/*Accordion*/
+/*Accordion*/
+
+
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.accordion-wrapper {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+  width: 1300px;
+  margin:0 auto;
+}
+.accordion {
+  width: 100%;
+  color: white;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.accordion:last-child{
+  margin-bottom: 0;
+}
+.accordion-label {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding: 16px;
+  background: #004146;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 20px;
+}
+.accordion-label:hover {
+  background: #004146;
+}
+.accordion-label::after {
+  content: "\276F";
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.accordion-content {
+  max-height: 0;
+  padding: 0 16px;
+  color: rgba(4,57,94,1);
+  background: white;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.accordion-content p{
+  margin: 0;
+  color: rgba(4,57,94,.7);
+  font-size: 18px;
+}
+input:checked + .accordion-label {
+  background: #004146;
+}
+input:checked + .accordion-label::after {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+input:checked ~ .accordion-content {
+  max-height: 100vh;
+  padding: 16px;
+}
+
+.firstSec{
+  display: flex;
+  justify-content: space-around;
+}
+/*MEDIA QUERY*/
+/*MEDIA QUERY*/
+/*MEDIA QUERY*/
+/*MEDIA QUERY*/
+/*MEDIA QUERY*/
+@media (max-width:575px)  {
+  .container{
+    flex-direction: column;
+  }
+
+  .one{
+    display: block;
+  }
+
+.section.one.active{
+    flex: 3;
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+  .section .title-content,
+  .section.active .title-content
+   {
+    padding-right: 10px;
+    transform: rotate(0deg);
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-bottom: unset;
+    background-color: rgba(248, 248, 255, 0.185);
+    height: 5%;
+    }
+
+    .thirdSec{
+      flex-direction: column;
+    }
+
+  img{height: 100px;
+  width: 100px;}
+  
+ /* img. img src: 100px;*/
+
+  
+  .sectionContent{
+    padding-top: 10%;
+  }
+  .sectionContent .accordion-wrapper{
+    width: 300px;
+  }
+}
+
+
+
