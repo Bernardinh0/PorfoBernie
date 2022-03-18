@@ -20,17 +20,17 @@
 }
 /*Adding background image to each section*/
 .one{
-	background: #004146;
+	background: #03BFB5;
 }
 .two{
 	background: #018076;
 }
 .three{
-	background: #03BFB5;
+	background: #004146;
   display: flex;
 }
 .four{
-	background: #949398;
+	background: #002416;
 }
 /* Background properties and transition effect to section */
 .section{
@@ -286,7 +286,8 @@ input:checked ~ .accordion-content {
 
 .firstSec{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  width: 70%;
 }
 /*MEDIA QUERY*/
 /*MEDIA QUERY*/
